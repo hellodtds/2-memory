@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #ffffff url('../img/cubes_@2X.png'); /* background pattern from SubtlePatterns.com */
+    font-family: 'Coda', cursive;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 4em;
+}
+
+
+
+
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2em;
+    background: linear-gradient(130deg, #2473636b 70%, #c92626e8 60%);
+    padding: 33px;
+    border-radius: 12px;
+    margin: 0 0 3em;
+}
+
+
+.deck .card {
+  width: 18vw;
+  height: 25vh;
+  background: #2e4749;
+  font-size: 0;
+  color: #ffffff; 
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(41, 46, 50, 0.5);
+  }
+
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #ca3838;
+  cursor: default;
+}
+
+
+.deck .card.show {
+  font-size: 99px;
+}
+
+
+.deck .card.match {
+  cursor: default;
+  background: #9cbcb6;
+  font-size: 99px;
+}
+
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 90px 0 0;
+}
+
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
