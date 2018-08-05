@@ -47,26 +47,30 @@ h1 {
 .deck {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.2em;
+    grid-gap: 1rem;
     background: linear-gradient(130deg, #2473636b 70%, #c92626e8 60%);
-    padding: 33px;
+    padding: 12px;
     border-radius: 12px;
-    margin: 0 0 3em;
+    margin: 0 1rem;
+    height: 570px;
+    max-width: 1000px;
 }
 
 
 .deck .card {
-  width: 18vw;
-  height: 25vh;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  width: 125px;
+  height: 125px;
   background: #2e4749;
   font-size: 0;
-  color: #ffffff; 
+  color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center;
   box-shadow: 5px 2px 20px 0 rgba(41, 46, 50, 0.5);
+  padding: 1.6rem 0;
   }
 
 
@@ -78,20 +82,22 @@ h1 {
 
 
 .deck .card.show {
-  font-size: 99px;
+  font-size: 66px;
 }
 
 
 .deck .card.match {
   cursor: default;
   background: #9cbcb6;
-  font-size: 99px;
+  font-size: 66px;
 }
 
 .score-panel {
   text-align: left;
-  width: 345px;
+  width: 500px;
   margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: 100;
 }
 
 
@@ -112,4 +118,46 @@ h1 {
 .score-panel .restart {
   float: right;
   cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .deck {
+    width: 300px;
+    height: 300px;
+  }
+  .deck .card {
+ 
+  width: 50px;
+  height: 50px;
+  background: #2e4749;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem 0;
+  }
+
+  .deck .card.show {
+    font-size: 20px;
+  }
+
+
+  .deck .card.match {
+    cursor: default;
+    background: #9cbcb6;
+    font-size: 20px;
+  }
+
+    .score-panel {
+    text-align: left;
+    width: 300px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    font-weight: 100;
+  }
 }
